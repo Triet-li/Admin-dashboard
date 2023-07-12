@@ -4,6 +4,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     margin: 0;
+    padding: 0;
 }
 
 #main {
@@ -16,6 +17,13 @@ body {
 header {
     border: 1px solid rgb(224, 224, 226);
     display: flex;
+    margin: 0 3rem;
+    position: relative;
+    top: 2rem;
+    margin-bottom: 5rem;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    background-color: white;
 }
 
 .actions, .functions {
@@ -26,6 +34,45 @@ header {
 
 .functions {
     margin-left: auto;
+    margin-right: 5.8rem;
+}
+
+.functions img {
+    width: 40%;
+    height: 40%;
+    padding: 10px;
+}
+
+.functions img[src="pics/home.svg"] {
+    width: 25%;
+    height: 15%;   
+}
+
+img[src="pics/bell.svg"] {
+   border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+#main header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main p {
+    color: rgb(100, 95, 95);
+    font-size: 1.2rem;
+}
+
+.actions, .functions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
 }
 
 /*=================================Main Content =================================*/
@@ -34,12 +81,6 @@ header {
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
-
-.main > div > div{
-    border: 1px solid rgb(224, 224, 226);
-    height: 20rem;
-    border-radius: 5px;
-} 
 
 .pt-container {
     
@@ -50,6 +91,69 @@ header {
     grid-template-columns: 1fr 1fr;
 }
 
+.pt {
+    border: 1px solid rgb(224, 224, 226);
+    height: 25rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.pt-utilities {
+    align-self: flex-end;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: flex-end;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+
+.hover-text {
+    position: relative;
+    display: inline-block;
+
+    font-family: Arial;
+    text-align: center;
+  }
+
+.hover-text:hover .tooltip {
+    visibility: visible;
+}
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 3.8rem;
+    color: white;
+    font-size: 0.9rem;
+    background-color: #192733;
+    border-radius: 10px;
+    padding: 10px 15px 10px 10px;
+    top: 25px;
+    left: -85%;
+  }
+
+  a {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+.live {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 85%;
+   
+}
+
+.live img {
+    width: 95%;
+    height: 70%;
+}
 
 /*==========================Side Main===========================================*/
 .a-container, .tr-container {
@@ -80,10 +184,41 @@ nav {
     background-color: rgb(24, 23, 23);
 }
 
-nav div {
+nav div div {
     display: flex;
+    gap: 1rem;
+    position: relative;
+    left: 2.2rem;
+   
+    width: 60%;
 }
 
-nav div p, h3 {
+nav div div p:hover, nav div div img:hover {
+    color: rgb(129, 129, 241);
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    
+}
+
+.home-img {
+    position: relative;
+    top: 10px;
+}
+
+nav div p{
     color: rgb(170, 168, 168);
+    font-size: 1.3rem;
+}
+
+
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    width: 73%;
 }
